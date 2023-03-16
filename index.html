@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bootstrap 4 Form Validation De</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+  <style src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></style>
+
+    <link rel="stylesheet" href="home.css">
+
+    <script type="text/javascript">
+        function validate(){
+            var Name=document.getElementById("name")
+            var Username=document.getElementById("uname")
+            var Email=document.getElementById("email")
+            var Password=document.getElementById("pwd")
+            var ConfirmPassword=document.getElementById("cpwd")
+            var Message=document.getElementById("msg")
+
+            if (Name.value=="" || Username.value=="" || Email.value=="" || Password.value || ConfirmPassword.value=="" || Message.value==""){
+                alert("Please fill in the details")
+                return false;
+            }
+            else{
+                return true
+            }
+
+        }
+
+    </script>
+
+</head>
+<body>
+
+<form onsubmit="return validate()" action="validate 3.html" class="bg-light">
+    <legend class="text-center">Bootstrap 4 Form Validation Demo</legend>
+    <br>
+
+    <label for="name">Name</label>
+    <input type="text" class="form-control" id="name" placeholder="Name"><br>
+
+    <label for="uname">Username</label>
+    <input type="text" class="form-control" id="uname" placeholder="Username"><br>
+
+    <label for="email">Email</label>
+    <input type="email" class="form-control" id="email" placeholder="Email"><br>
+
+    <label for="pwd">Password</label>
+    <input type="password" class="form-control" id="pwd" placeholder="Password"><br>
+
+    <label for="cpwd">Confirm Password</label>
+    <input type="password" class="form-control" id="cpwd" placeholder="Confirm Password"><br>
+
+    <label for="msg">Message</label>
+    <textarea name="Message" id="msg" cols="90" rows="2"></textarea><br>
+
+    <button class="btn bg-primary" type="submit" >Send</button>
+
+</form>
+</body>
+</html>
